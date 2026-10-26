@@ -4,7 +4,7 @@ Customer interest page for Giiyo Eats, affordable fresh workplace lunches in Dou
 
 The only page is [`/join`](https://eats.giiyo.com/join). `/` redirects there. Visitors can say what they would like to eat. The page does not take orders, payments, subscriptions, or accounts.
 
-Pilot areas are Bonamoussadi and Makepe. Launch is Monday 23 November 2026. Meals are 3,000 FCFA, delivery included.
+The pilot is in Douala. Launch is Monday 23 November 2026. Meals are 3,000 FCFA, delivery included.
 
 ## Run locally
 

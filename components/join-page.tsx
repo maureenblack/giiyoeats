@@ -30,8 +30,8 @@ export function JoinPage({ form }: { form: InterestForm }) {
         )}
         <h1>Good lunch is coming to work.</h1>
         <p className="lede">
-          Giiyo Eats is bringing fresh lunches to Bonamoussadi and Makepe from
-          23 November 2026. 3,000 FCFA per meal, delivery included.
+          Giiyo Eats is bringing fresh lunches to Douala from 23 November 2026.
+          3,000 FCFA per meal, delivery included.
         </p>
         <p className="survey-note">
           The survey takes about 2 minutes and is non-binding.

@@ -23,7 +23,7 @@ const body = Nunito({
 });
 
 const description =
-  "Giiyo Eats is bringing fresh lunches to Bonamoussadi and Makepe from 23 November 2026. 3,000 FCFA per meal, delivery included. Share your interest. This is not an order.";
+  "Giiyo Eats is bringing fresh lunches to Douala from 23 November 2026. 3,000 FCFA per meal, delivery included. Share your interest. This is not an order.";
 
 const title = "Good lunch is coming to work | Giiyo Eats";
 
