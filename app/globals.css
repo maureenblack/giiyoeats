@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+/*
+  Brand colours sampled from public/brand/giiyo-eats-logo.png.
+  Most frequent red pixel: #DB1918. Most frequent cream pixel: #FEFAEF.
+  Red on cream is about 4.8:1, which clears WCAG AA for normal text.
+  Ink (#241C16) is for body copy on the cream page.
+*/
+:root {
+  --brand-red: #db1918;
+  --brand-red-hover: #b81615;
+  --brand-cream: #fefaef;
+  --ink: #241c16;
+  --card: #ffffff;
+}
+
+html {
+  color-scheme: light;
+  background: var(--brand-cream);
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--brand-cream);
+  color: var(--ink);
+  font-family: var(--font-nunito), "Nunito", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+.page {
+  box-sizing: border-box;
+  width: min(100%, 42rem);
+  margin-inline: auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: min(100%, 22rem);
+  height: auto;
+  margin: 0 auto 0.25rem;
+}
+
+.logo-fallback {
+  margin: 0 0 0.5rem;
+  color: var(--brand-red);
+  font-family: var(--font-nunito), "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+.open-form {
+  font-family: var(--font-baloo), "Baloo 2", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0.25rem 0 1rem;
+  color: var(--brand-red);
+  font-size: clamp(2.4rem, 8vw, 3.75rem);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.lede {
+  max-width: 36rem;
+  margin: 0 auto 1.1rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
+.survey-note {
+  display: inline-block;
+  margin: 0 0 1.75rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(219, 25, 24, 0.1);
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.open-form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: var(--brand-red);
+  color: var(--brand-cream);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(219, 25, 24, 0.22);
+}
+
+.open-form:visited {
+  color: var(--brand-cream);
+}
+
+.open-form:hover {
+  background: var(--brand-red-hover);
+}
+
+.form-frame {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border: 2px solid rgba(219, 25, 24, 0.16);
+  border-radius: 1.75rem;
+  background: var(--card);
+  box-shadow: 0 18px 40px rgba(36, 28, 22, 0.06);
+}
+
+.form-loading {
+  margin: 0;
+  padding: 1rem 1.25rem 0.25rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.interest-frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  /* 11 questions plus the form introduction. Above the 1,500px mobile minimum. */
+  min-height: 2700px;
+  border: 0;
+  background: var(--card);
+}
+
+.unconfigured {
+  padding: 1.5rem 1.25rem;
+  border: 2px dashed rgba(219, 25, 24, 0.45);
+  border-radius: 1.75rem;
+  background: var(--card);
+  text-align: center;
+}
+
+.unconfigured h2 {
+  margin: 0 0 0.5rem;
+  color: var(--brand-red);
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.unconfigured p {
+  margin: 0 auto;
+  max-width: 32rem;
+}
+
+.privacy {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(219, 25, 24, 0.16);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(219, 25, 24, 0.18);
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.15rem 0;
+}
+
+.footer a {
+  color: var(--brand-red);
+  font-weight: 700;
+  text-underline-offset: 0.18em;
+}
+
+.footer a:visited {
+  color: var(--brand-red);
+}
+
+.footer a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+.open-form:focus-visible,
+.skip-link:focus {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 2;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: var(--brand-red);
+  color: var(--brand-cream);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .open-form {
+    width: auto;
+    min-width: 18rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 2.75rem 1.5rem 4rem;
+  }
+
+  .interest-frame {
+    min-height: 2500px;
+  }
+}
