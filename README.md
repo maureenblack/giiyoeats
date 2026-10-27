@@ -38,7 +38,7 @@ Contact mail is [eats@giiyo.com](mailto:eats@giiyo.com).
 
 The wordmark and smiling mark are the brand-pack files in `public/brand/`, copied unchanged from `Giiyo Eats/Brand/Logo Assets/`. The header and footer use `GiiyoEats_Logo_Wordmark_Red_Transparent.png`. The hero badge uses `GiiyoEats_Logo_Mark_Red_Transparent.png`. Do not redraw, recompress, or trace them. The page references those paths from `lib/brand.ts` and serves them with `<img>`, not `next/image`. The red wordmark is also the Open Graph image.
 
-The hero circle crops `public/food/hero-bowls.jpg` (three rice bowls, upscaled from the 294×220 source) with `next/image`. Image widths stop at 828px so Next does not enlarge the 880px file. The other dish photos stay in `public/food/`. The join layout has a single food frame. The small smiling mark stays only as the badge overlapping the circle.
+The hero circle crops `public/food/hero-bowls.jpg` (three rice bowls, a centred 1200×1200 crop of the 1604×1200 source) with `next/image`. Image widths stop at 1200px so Next does not enlarge the file. The other dish photos stay in `public/food/`. The join layout has a single food frame. The small smiling mark stays only as the badge overlapping the circle.
 
 Colours are sampled from the join-page design: red `#DA1B1C`, cream `#FDF9EC`, beige `#F5EAD8`, olive `#7A8A5E`, charcoal `#201E1D`. Headlines use Fraunces (a heavy rounded serif). Body text uses DM Sans.
 
