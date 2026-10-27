@@ -89,8 +89,12 @@ test("configured form renders the iframe and derived link", () => {
   assert.match(html, /Join the list/);
   assert.match(html, /Take the 2-minute survey/);
   assert.match(html, /Help us plan your lunch/);
-  assert.match(html, /alt="Vegetable rice with fried chicken"/);
-  assert.match(html, /vegetable-rice-chicken\.jpg/);
+  assert.match(
+    html,
+    /alt="Rice bowls with grilled chicken, glazed chicken and fresh salad"/,
+  );
+  assert.match(html, /hero-bowls\.jpg/);
+  assert.match(html, /sizes="\(max-width: 979px\) 328px, 496px"/);
   assert.match(html, /class="hero-dish"/);
   assert.equal(html.includes("GiiyoEats_Mockup_Lunchbox"), false);
   assert.equal(html.includes("GiiyoEats_Logo_Mark_Cream"), false);

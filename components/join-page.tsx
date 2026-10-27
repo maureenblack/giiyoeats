@@ -104,10 +104,11 @@ export function JoinPage({ form }: { form: InterestForm }) {
         <div className="hero-visual">
           <div className="lunch-circle">
             <Image
-              src="/food/vegetable-rice-chicken.jpg"
-              alt="Vegetable rice with fried chicken"
+              src="/food/hero-bowls.jpg"
+              alt="Rice bowls with grilled chicken, glazed chicken and fresh salad"
               fill
-              sizes="(max-width: 979px) 90vw, 442px"
+              sizes="(max-width: 979px) 328px, 496px"
+              quality={85}
               className="hero-dish"
               preload
             />
