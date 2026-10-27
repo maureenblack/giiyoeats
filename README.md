@@ -38,7 +38,7 @@ Contact mail is [eats@giiyo.com](mailto:eats@giiyo.com).
 
 The wordmark and smiling mark are the brand-pack files in `public/brand/`, copied unchanged from `Giiyo Eats/Brand/Logo Assets/`. The header and footer use `GiiyoEats_Logo_Wordmark_Red_Transparent.png`. The hero badge uses `GiiyoEats_Logo_Mark_Red_Transparent.png`. Do not redraw, recompress, or trace them. The page references those paths from `lib/brand.ts` and serves them with `<img>`, not `next/image`. The red wordmark is also the Open Graph image.
 
-The hero circle crops `GiiyoEats_Mockup_LunchboxWithStickers.png` (from the pack’s stickers folder) into a round frame.
+The hero circle crops Maureen’s vegetable rice with fried chicken (`public/food/vegetable-rice-chicken.jpg`) with `next/image`. The cabbage salad and greens with chicken files sit alongside it in `public/food/`. The join layout has a single food frame, so those two are not placed in extra spots. The small smiling mark stays only as the badge overlapping the circle.
 
 Colours are sampled from the join-page design: red `#DA1B1C`, cream `#FDF9EC`, beige `#F5EAD8`, olive `#7A8A5E`, charcoal `#201E1D`. Headlines use Fraunces (a heavy rounded serif). Body text uses DM Sans.
 

@@ -89,11 +89,25 @@ test("configured form renders the iframe and derived link", () => {
   assert.match(html, /Join the list/);
   assert.match(html, /Take the 2-minute survey/);
   assert.match(html, /Help us plan your lunch/);
-  assert.match(
-    html,
-    /src="\/brand\/GiiyoEats_Mockup_LunchboxWithStickers\.png"/,
+  assert.match(html, /alt="Vegetable rice with fried chicken"/);
+  assert.match(html, /vegetable-rice-chicken\.jpg/);
+  assert.match(html, /class="hero-dish"/);
+  assert.equal(html.includes("GiiyoEats_Mockup_Lunchbox"), false);
+  assert.equal(html.includes("GiiyoEats_Logo_Mark_Cream"), false);
+  assert.equal(html.includes("GiiyoEats_Logo_Mark_Charcoal"), false);
+  const images = [...html.matchAll(/<img\b[^>]*>/g)].map((match) => match[0]);
+  assert.equal(
+    images.filter((tag) =>
+      tag.includes("GiiyoEats_Logo_Mark_Red_Transparent.png"),
+    ).length,
+    1,
   );
-  assert.match(html, /src="\/brand\/GiiyoEats_Logo_Mark_Red_Transparent\.png"/);
+  assert.equal(
+    images.filter((tag) =>
+      tag.includes("GiiyoEats_Logo_Wordmark_Red_Transparent.png"),
+    ).length,
+    2,
+  );
   assert.equal(html.includes("Bonamoussadi"), false);
   assert.equal(html.includes("Makepe"), false);
   assert.equal(html.includes("Santa Barbara"), false);

@@ -195,6 +195,7 @@ h1 {
 }
 
 .lunch-circle {
+  position: relative;
   width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
@@ -202,12 +203,9 @@ h1 {
   background: var(--brand-red);
 }
 
-.lunch-circle img {
-  display: block;
-  width: 100%;
-  height: 100%;
+.hero-dish {
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center;
 }
 
 .price-badge {

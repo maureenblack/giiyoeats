@@ -1,8 +1,6 @@
+import Image from "next/image";
 import { FormEmbed } from "@/components/form-embed";
 import {
-  GIIYO_EATS_LUNCHBOX_HEIGHT,
-  GIIYO_EATS_LUNCHBOX_PATH,
-  GIIYO_EATS_LUNCHBOX_WIDTH,
   GIIYO_EATS_MARK_HEIGHT,
   GIIYO_EATS_MARK_PATH,
   GIIYO_EATS_MARK_WIDTH,
@@ -11,7 +9,6 @@ import {
   GIIYO_EATS_WORDMARK_WIDTH,
   hasApprovedMark,
   hasApprovedWordmark,
-  hasLunchboxPhoto,
 } from "@/lib/brand";
 import type { InterestForm } from "@/lib/interest-form";
 
@@ -106,16 +103,14 @@ export function JoinPage({ form }: { form: InterestForm }) {
 
         <div className="hero-visual">
           <div className="lunch-circle">
-            {hasLunchboxPhoto ? (
-              // Original brand-pack file. next/image would recompress it.
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={GIIYO_EATS_LUNCHBOX_PATH}
-                alt="Giiyo Eats lunchbox"
-                width={GIIYO_EATS_LUNCHBOX_WIDTH}
-                height={GIIYO_EATS_LUNCHBOX_HEIGHT}
-              />
-            ) : null}
+            <Image
+              src="/food/vegetable-rice-chicken.jpg"
+              alt="Vegetable rice with fried chicken"
+              fill
+              sizes="(max-width: 979px) 90vw, 442px"
+              className="hero-dish"
+              preload
+            />
           </div>
           <p className="price-badge">
             <span className="price-amount">
