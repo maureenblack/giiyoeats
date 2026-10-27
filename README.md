@@ -32,15 +32,19 @@ That value is in `.env.example`. Next.js inlines `NEXT_PUBLIC_` variables at bui
 
 Responses are collected by Google Forms. Only people who answer “Yes, please” to the WhatsApp consent question should receive launch or marketing messages. Submitting the form is not an order.
 
-Contact mail is [hello@giiyotech.com](mailto:hello@giiyotech.com).
+Contact mail is [eats@giiyo.com](mailto:eats@giiyo.com).
 
 ## Logo and colour
 
-The approved logo is `public/brand/giiyo-eats-logo.png`. The page references it through the `GIIYO_EATS_LOGO_PATH` constant (`/brand/giiyo-eats-logo.png`). Do not redraw, recompress, or replace that file. It is also the Open Graph image.
+The wordmark and smiling mark are the brand-pack files in `public/brand/`, copied unchanged from `Giiyo Eats/Brand/Logo Assets/`. The header and footer use `GiiyoEats_Logo_Wordmark_Red_Transparent.png`. The hero badge uses `GiiyoEats_Logo_Mark_Red_Transparent.png`. Do not redraw, recompress, or trace them. The page references those paths from `lib/brand.ts` and serves them with `<img>`, not `next/image`. The red wordmark is also the Open Graph image.
 
-Red `#DB1918` and cream `#FEFAEF` are the most frequent red and cream pixels in that file. Headings, buttons, and links use the red. The page background is the cream. Headings use Baloo 2. Body text uses Nunito.
+The hero circle crops `GiiyoEats_Mockup_LunchboxWithStickers.png` (from the pack’s stickers folder) into a round frame.
 
-If `public/brand/giiyo-eats-logo.png` is removed, the header shows the words “Giiyo Eats” in the brand red as plain text until the approved file is put back at that path.
+Colours are sampled from the join-page design: red `#DA1B1C`, cream `#FDF9EC`, beige `#F5EAD8`, olive `#7A8A5E`, charcoal `#201E1D`. Headlines use Fraunces (a heavy rounded serif). Body text uses DM Sans.
+
+If the red wordmark file is removed, the header and footer show the words “Giiyo Eats” in the brand red as plain text until the file is put back.
+
+The page does not name neighbourhoods. The footer location is Douala, Cameroon. Contact mail is [eats@giiyo.com](mailto:eats@giiyo.com).
 
 ## Checks
 

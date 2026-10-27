@@ -12,19 +12,9 @@ export function FormEmbed({ embedUrl, openUrl }: FormEmbedProps) {
 
   return (
     <div className="form-block">
-      <div className="form-actions">
-        <a
-          className="open-form"
-          href={openUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open form in a new tab
-        </a>
-      </div>
-      <div className="form-frame">
+      <div className="form-card">
         <p className="form-loading" role="status" hidden={loaded}>
-          Loading the interest form…
+          Loading the form...
         </p>
         <iframe
           className="interest-frame"
@@ -33,6 +23,16 @@ export function FormEmbed({ embedUrl, openUrl }: FormEmbedProps) {
           loading="lazy"
           onLoad={() => setLoaded(true)}
         />
+      </div>
+      <div className="form-actions">
+        <a
+          className="open-form"
+          href={openUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open form in a new tab <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </div>
   );

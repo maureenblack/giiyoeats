@@ -13,12 +13,12 @@ if (!base || !label) {
 await mkdir(outDir, { recursive: true });
 
 const browser = await chromium.launch();
-const widths = [360, 1280];
+const widths = [390, 1280];
 
 try {
   for (const width of widths) {
     const page = await browser.newPage({
-      viewport: { width, height: width === 360 ? 780 : 900 },
+      viewport: { width, height: width < 800 ? 844 : 900 },
     });
     const response = await page.goto(`${base}/join`, {
       waitUntil: "domcontentloaded",

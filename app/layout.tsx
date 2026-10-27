@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
-import { Baloo_2, Nunito } from "next/font/google";
+import { DM_Sans, Fraunces } from "next/font/google";
 import {
-  GIIYO_EATS_LOGO_HEIGHT,
-  GIIYO_EATS_LOGO_PATH,
-  GIIYO_EATS_LOGO_WIDTH,
-  hasApprovedLogo,
+  GIIYO_EATS_WORDMARK_HEIGHT,
+  GIIYO_EATS_WORDMARK_PATH,
+  GIIYO_EATS_WORDMARK_WIDTH,
+  hasApprovedWordmark,
 } from "@/lib/brand";
 import "./globals.css";
 
-const display = Baloo_2({
+const display = Fraunces({
   subsets: ["latin"],
-  weight: "700",
-  variable: "--font-baloo",
+  weight: "variable",
+  axes: ["SOFT", "WONK", "opsz"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const body = Nunito({
+const body = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-nunito",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dm",
   display: "swap",
 });
 
@@ -27,12 +28,12 @@ const description =
 
 const title = "Good lunch is coming to work | Giiyo Eats";
 
-const ogImages = hasApprovedLogo
+const ogImages = hasApprovedWordmark
   ? [
       {
-        url: GIIYO_EATS_LOGO_PATH,
-        width: GIIYO_EATS_LOGO_WIDTH,
-        height: GIIYO_EATS_LOGO_HEIGHT,
+        url: GIIYO_EATS_WORDMARK_PATH,
+        width: GIIYO_EATS_WORDMARK_WIDTH,
+        height: GIIYO_EATS_WORDMARK_HEIGHT,
         alt: "Giiyo Eats",
       },
     ]
